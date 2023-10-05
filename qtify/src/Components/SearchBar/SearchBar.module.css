@@ -1,0 +1,26 @@
+.searchContent{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #121212;
+}
+
+.searchBar{
+    width: 502px;
+    min-height: 48px;
+    padding: 14px 0px 15px 20px;
+    color: #121212;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+}
+
+.searchButton{
+    width: 66px;
+    min-height: 48px;
+    /* background-color: #FFF; */
+}
