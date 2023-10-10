@@ -1,13 +1,14 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
-import Card from './Components/Card/Card';
+import AlbumsContainer from './Components/AlbumsContainer/AlbumsContainer';
+
 function App() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <div style={{padding: '31px'}}><Card /></div>
+      <AlbumsContainer />
     </div>
   );
 }

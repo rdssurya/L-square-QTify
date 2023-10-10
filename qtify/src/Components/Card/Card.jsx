@@ -1,17 +1,17 @@
 import React from 'react';
-import CardImage from '../CardImage/CardImage';
 import styles from './Card.module.css';
-import Followers from '../Followers/Followers';
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className={styles.cardContent}>
         <div className={styles.imageContent}>   
-            <CardImage />
-            <div className={styles.follows}><Followers /></div>
+            <img src={props.image} alt="" className={styles.img}/>
+            <div className={styles.follows}>
+              <div className={styles.followsDiv}>{props.follows} Follows</div>
+            </div>
         </div>
         <div className={styles.cardTitle}>
-            New Bollywood
+            {props.title}
         </div>
     </div>
   )
