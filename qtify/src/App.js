@@ -31,7 +31,7 @@ function App() {
       <Navbar />
       <Hero />
       <Section data={topAlbums} title={'Top Albums'} />
-      {/* <Section data={newAlbums} title={'New Albums'} /> */}
+      <Section data={newAlbums} title={'New Albums'} />
     </div>
   );
 }
