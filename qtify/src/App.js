@@ -8,6 +8,7 @@ function App() {
 
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setNewAlbums] = useState([]);
+  const [songs, setSongs] = useState([]);
   
   useEffect(()=>{
       const fecthingTopAlbums = async (url) => {
@@ -23,6 +24,15 @@ function App() {
         setNewAlbums([...jsonData]);
     };
     fecthingNewAlbums('https://qtify-backend-labs.crio.do/albums/new');
+
+    const fecthingSongs = async (url) => {
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      setSongs([...jsonData]);
+  };
+  fecthingSongs('https://qtify-backend-labs.crio.do/songs');
+
+
   },[]);
 
 
@@ -32,6 +42,7 @@ function App() {
       <Hero />
       <Section data={topAlbums} title={'Top Albums'} />
       <Section data={newAlbums} title={'New Albums'} />
+      <Section data={songs} title={'Songs'} />
     </div>
   );
 }

@@ -4,20 +4,40 @@ import Tooltip from '@mui/material/Tooltip/Tooltip';
 
 const Card = (props) => {
   return (
-    <Tooltip title={`${props.songs.length} Songs`} placement="top">
-      <div className={styles.cardContent}>
-          <div className={styles.imageContent}>   
-              <img src={props.image} alt="" className={styles.img}/>
+    <div>
+      {props.genre ? (
+        <>
+          <div className={styles.cardContent}>
+            <div className={styles.imageContent}>
+              <img src={props.image} alt="" className={styles.img} />
+              <div className={styles.follows}>
+                <div className={styles.followsDiv}>{props.likes} Likes</div>
+              </div>
+            </div>
+            <div className={styles.cardTitle}>{props.title}</div>
+          </div>
+        </>
+      ) : (
+        <Tooltip title={`${props.songs.length} Songs`} placement="top">
+          <div className={styles.cardContent}>
+            <div className={styles.imageContent}>
+              <img src={props.image} alt="" className={styles.img} />
               <div className={styles.follows}>
                 <div className={styles.followsDiv}>{props.follows} Follows</div>
               </div>
+            </div>
+            <div className={styles.cardTitle}>{props.title}</div>
           </div>
-          <div className={styles.cardTitle}>
-              {props.title}
-          </div>
-      </div>
-    </Tooltip>
-  )
+        </Tooltip>
+      )}
+    </div>
+  );
 };
 
 export default Card;
+
+
+
+
+
+

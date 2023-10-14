@@ -13,6 +13,25 @@ const Section = ({title,data}) => {
 
   return (
     <div style={{marginBottom: '30px'}}>
+        {title === "Songs" ?
+        (<>
+        <div className={styles.header}>
+            <h3 style={{paddingLeft: '16px'}}>{title}</h3>
+        </div>
+        { data.length === 0? (<CircularProgress />):(
+        <div className={styles.cardsWrapper}>
+            {!carouselToggle? (
+                <div className={styles.container}>
+            {data.map((album)=>(
+                <Card key={album.id} image={album.image} title={album.title} likes={album.likes} songs={album.songs} genre={album.genre}/>
+            ))}
+            </div>):<>
+            <Carousel data={data} renderComponent={(data)=> <Card key={data.id} image={data.image} title={data.title} likes={data.likes} songs={data.songs} genre={data.genre}/>}/>
+            </>}
+        </div>)}
+        </>)
+        :(
+        <>
         <div className={styles.header}>
             <h3 style={{paddingLeft: '16px'}}>{title}</h3>
             <h4 onClick={handleToggle}>{!carouselToggle? <Button children={"Collapse"}/> : <Button children={"Show All"}/>}</h4>
@@ -27,10 +46,7 @@ const Section = ({title,data}) => {
             </div>):<>
             <Carousel data={data} renderComponent={(data)=> <Card key={data.id} image={data.image} title={data.title} follows={data.follows} songs={data.songs}/>}/>
             </>}
-        </div>
-        
-        )
-
+        </div>)}</>)
         }
     </div>
   );
