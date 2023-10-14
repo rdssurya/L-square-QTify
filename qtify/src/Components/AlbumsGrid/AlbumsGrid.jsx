@@ -19,7 +19,7 @@ const AlbumsGrid = (props) => {
     return (
         <div className={styles.container}>
             {topAlbums.map((album)=>(
-                <Card key={album.id} image={album.image} title={album.title} follows={album.follows}/>
+                <Card key={album.id} image={album.image} title={album.title} follows={album.follows} songs={album.songs}/>
             ))}
         </div>
     );
