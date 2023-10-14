@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import { useEffect, useState } from 'react';
 import Section from './Components/Section/Section';
+import FAQ from './Components/Accordions/Accordions';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
       <Section data={topAlbums} title={'Top Albums'} />
       <Section data={newAlbums} title={'New Albums'} />
       <Section data={songs} title={'Songs'} />
+      <FAQ />
     </div>
   );
 }
