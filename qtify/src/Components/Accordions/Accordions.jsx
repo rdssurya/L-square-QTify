@@ -7,15 +7,16 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function FAQ() {
   return (
-    <div>
-        <h1 style={{textAlign: 'center'}}>FAQ</h1>
-      <Accordion>
+    <div style={{paddingInline:'20px'}}>
+        <h1 style={{textAlign: 'center',paddingBottom:'20px'}}>FAQs</h1>
+      <Accordion style={{borderRadius:'15px'}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        style={{color:'#fff', backgroundColor: '#000',borderRadius:'15px', border:"1px solid #fff"}}
+          expandIcon={<ExpandMoreIcon style={{color: 'var(--color-primary)'}}/>}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Is QTify free to use?</Typography>
+          <Typography >Is QTify free to use?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -23,9 +24,10 @@ export default function FAQ() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{ borderRadius:'15px'}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        style={{color:'#fff', backgroundColor: '#000',borderRadius:'15px', border:"1px solid #fff"}}
+          expandIcon={<ExpandMoreIcon style={{color: 'var(--color-primary)'}}/>}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
