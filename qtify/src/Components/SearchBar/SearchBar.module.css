@@ -22,3 +22,14 @@
     border-left: none;
     cursor: pointer;
 }
+
+.searchResult{
+    font-size: 13px;
+    padding-inline: 5px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    border-bottom: 1px solid wheat;
+}

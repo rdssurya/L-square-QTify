@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar data={[...topAlbums,...newAlbums]}/>
       <Hero />
       <Section data={topAlbums} title={'Top Albums'} />
       <Section data={newAlbums} title={'New Albums'} />
